@@ -4,7 +4,7 @@
 </div>
 
 <h1>
-  By: Adrian Jomer V. Arboso
+By: Adrian Jomer V. Arboso/n
 Section: 2ECE-D
 University: University of Santo Tomas
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
