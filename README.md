@@ -4,7 +4,9 @@
 </div>
 
 <h1>
-  hi po
+  By: Adrian Jomer V. Arboso
+Section: 2ECE-D
+University: University of Santo Tomas
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h1>
 <div align="center">
@@ -12,4 +14,4 @@
 </div>
 
 ### :woman_technologist: About:
-This project analyzes a dataset of music tracks across various streaming platforms to uncover trends, insights, and characteristics that might affect a track's popularity. The analysis covers general statistics, correlations, and comparisons between platforms like Spotify, Deezer, and Apple Music. Visualizations and descriptive statistics provide a deeper look into the factors that could make certain tracks or artists more successful.
+This analysis was conducted as part of an academic project for understanding data analysis techniques in the field of music streaming. By utilizing Python-based libraries for data manipulation and visualization, this project offers insights into musical trends, artist popularity, and platform-specific preferences. The dataset analyzed here represents a snapshot of Spotify tracks, and findings from this project may be useful for streaming platforms, music producers, and marketing professionals.
