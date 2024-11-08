@@ -12,6 +12,7 @@ Section: 2ECE-D
 <h3>
 University: University of Santo Tomas
 </h3>
+HEllo!
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h3>
 <div align="center">
