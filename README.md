@@ -19,10 +19,10 @@ University: University of Santo Tomas
   <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
 </div>
 
-### :woman_technologist: About:
+### :man_technologist: About:
 This analysis was conducted as part of an academic project for understanding data analysis techniques in the field of music streaming. By utilizing Python-based libraries for data manipulation and visualization, this project offers insights into musical trends, artist popularity, and platform-specific preferences. The dataset analyzed here represents a snapshot of Spotify tracks, and findings from this project may be useful for streaming platforms, music producers, and marketing professionals.
 
-### :woman_technologist: GENERAL GUIDELINES:
+### 📖: GENERAL GUIDELINES:
 
 :one: Begin by familiarizing yourself with the structure of the dataset. Check for missing values and data types, and perform an initial exploration to understand the different features available.
 
