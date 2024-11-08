@@ -5,8 +5,13 @@
 Section: 2ECE-D
 <h3>
 By: Adrian Jomer V. Arboso
+</h3>
+<h3>
 Section: 2ECE-D
+</h3>
+<h3>
 University: University of Santo Tomas
+</h3>
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
 </h3>
 <div align="center">
