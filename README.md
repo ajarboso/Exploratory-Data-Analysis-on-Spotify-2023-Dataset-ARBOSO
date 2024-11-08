@@ -34,3 +34,9 @@ This analysis was conducted as part of an academic project for understanding dat
 
 :five: Based on your analysis, offer any insights or recommendations regarding the tracks, artists, or musical trends that could be useful for understanding what makes a track popular.
 
+### :file_cabinet: Dataset:
+:arrow_right: spotify_data.csv 
+:arrow_right_hook:  Contains information about various Spotify tracks, including popularity metrics, genre information, danceability, and other audio features.
+
+
+
