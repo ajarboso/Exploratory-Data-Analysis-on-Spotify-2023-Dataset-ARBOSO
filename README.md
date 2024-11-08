@@ -2,9 +2,9 @@
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 </div>
-
+Section: 2ECE-D
 <h1>
-By: Adrian Jomer V. Arboso/n
+By: Adrian Jomer V. Arboso
 Section: 2ECE-D
 University: University of Santo Tomas
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/>
