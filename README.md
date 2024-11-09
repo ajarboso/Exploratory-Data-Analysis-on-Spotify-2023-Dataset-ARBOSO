@@ -528,13 +528,17 @@ Output:
 -----------------------
 ## 🖋️ Revisions:
 :one: Replaced Matplot to Seaborn for Correlations between different variables with the help of Chat GPT.
+
 :two: Coloring all of the Graphs into Pastel Colors
+
 :three: Changing the kind of Graphs for more efficient visualization.
+
 :Four: 
 
 -----------------------
 ## 📰 References: 
 :one: https://matplotlib.org/stable/gallery/color/named_colors.html
+
 :two: https://www.sitepoint.com/github-profile-readme/
 
 -----------------------
