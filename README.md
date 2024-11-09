@@ -58,7 +58,7 @@ df
 - Reads the Spotify dataset from a CSV file and stores it in a DataFrame (df) for analysis.
 -------------------------
 
-## 📘 Information of the dataFrame and Fixing all the missing Values and Data Types:
+## 🔡 Information of the dataFrame and Fixing all the missing Values and Data Types:
 
 ```df.info()
 
@@ -157,7 +157,7 @@ Output:
 ----------------------------
 ## 📈 Basic Descriptive Statistics: 
 
-####  mean, median, and standard deviation of the streams column:
+####  Mean, Median, and Standard deviation of the streams column:
 
 ```
 #Data Frame for mean,median and sd
@@ -170,6 +170,13 @@ streams_stats = pd.DataFrame({
 # Display
 streams_stats
 ```
+- The code calculates the mean, median, and standard deviation of the streams column in the DataFrame df and stores these statistics in a new DataFrame called streams_stats.
+
+Output:
+
+![image](https://github.com/user-attachments/assets/4f5759b4-8b8d-46fb-9ed0-ad41ab855921)
+
+
 #### Distribution of released_year, artist_count and trends or outliers:
 
 ```
@@ -533,13 +540,13 @@ Output:
 
 :three: Changing the kind of Graphs for more efficient visualization.
 
-:Four: 
-
 -----------------------
 ## 📰 References: 
 :one: https://matplotlib.org/stable/gallery/color/named_colors.html
 
 :two: https://www.sitepoint.com/github-profile-readme/
+
+:three: https://chatgpt.com
 
 -----------------------
 
