@@ -20,6 +20,7 @@ University: University of Santo Tomas
 </div>
 
 ### :man_technologist: About:
+
 This analysis was conducted as part of an academic project for understanding data analysis techniques in the field of music streaming. By utilizing Python-based libraries for data manipulation and visualization, this project offers insights into musical trends, artist popularity, and platform-specific preferences. The dataset analyzed here represents a snapshot of Spotify tracks, and findings from this project may be useful for streaming platforms, music producers, and marketing professionals.
 
 ### 📖: GENERAL GUIDELINES:
@@ -240,14 +241,20 @@ Output:
 
 ### 📈 Temporal Trends:
 ####  Trends in the number of tracks released over time:
+
 ```
 #display count the number of tracks released each year
 tracks = df['released_year'].value_counts().sort_index().reset_index()
 tracks.columns = ['Year', 'Track Count']
 tracks
 ```
+
+- This code counts the number of tracks released each year in the df DataFrame and organizes this information in a new DataFrame called tracks. It first counts occurrences of each unique year in the released_year column using value_counts(), giving the number of tracks released per year. The counts are then sorted in ascending order by year using sort_index(), which arranges the data chronologically. After sorting, reset_index() is applied to convert the result into a DataFrame with a default integer index. Finally, the columns are renamed to Year and Track Count for clarity. The resulting tracks DataFrame provides a clear view of the number of tracks released each year, with each row showing a specific year and the corresponding track count.
+
 Output:
 ![image](https://github.com/user-attachments/assets/80ae7296-ccab-41b3-a575-457ed3333d45) ![image](https://github.com/user-attachments/assets/a0392fde-b4e8-479b-802c-e17732b9a21a)
+
+- The analysis of the tracks DataFrame shows how the number of tracks released has changed over time. By plotting the Year against Track Count, we can observe trends such as increases or decreases in music releases over the years. Here's a code to create the plot:
 
 #### Plotted tracks released per year:
 
@@ -264,6 +271,7 @@ plt.show()
 Output:
 ![image](https://github.com/user-attachments/assets/c393c1f0-36e3-4236-907b-380f7a8e8771)
 
+
 #### Number of tracks released each month:
 ```
 # Group by month to count the number of tracks released each month
@@ -271,12 +279,15 @@ tracks_month = df['released_month'].value_counts().sort_index().reset_index()
 tracks_month.columns = ['Month', 'Track Count']
 tracks_month
 ```
+- This code groups the tracks by the month of release, counts the number of tracks released in each month, and organizes the result into a new DataFrame called tracks_month. Using value_counts() on the released_month column, it calculates the number of releases for each month, then sorts the months in ascending order using sort_index() to ensure the months are in order. Finally, it renames the columns to Month and Track Count for clarity
 
 Output:
 ![image](https://github.com/user-attachments/assets/da3add75-4645-4fc7-b342-f43c79aa56b7)
 
 #### Plotted number of tracks released each month:
 ```
+- To analyze patterns, you can observe if certain months consistently have more releases than others. For example, a particular month might show a peak in releases, indicating a trend. Here's a code to plot the results and see which month has the most releases:
+
 # Plot the number of tracks released per month
 plt.figure(figsize=(10, 6))
 plt.bar(tracks_month['Month'], tracks_month['Track Count'], color='palegreen')
@@ -290,6 +301,10 @@ plt.show()
 ```
 Output:
 ![image](https://github.com/user-attachments/assets/7819d395-17c6-4935-bc1d-16d8a9ba47f5)
+
+The plot shows patterns in track releases by month. For example, if December has the highest number of releases, it suggests a trend of increased music production for the holiday season. 
+
+
 
 ### 🎵 Genre and Music Characteristics:
 ####  Correlation between streams and musical attributes
@@ -308,6 +323,8 @@ correlation_df = correlation_df.sort_values(by='Streams Correlation', ascending=
 # Display
 correlation_df
 ```
+- This code calculates the correlation between streams and various musical attributes (e.g., bpm, danceability_%, energy_%) to identify which attributes are most associated with higher stream counts. By finding and sorting these correlations in a new DataFrame (correlation_df), it reveals the attributes with the strongest positive or negative impact on streams.
+
 Output:
 ![image](https://github.com/user-attachments/assets/4e182537-b6a0-4755-9f0d-cc80c842bdc0)
 
@@ -318,11 +335,12 @@ plt.barh(correlation_df['Attribute'], correlation_df['Streams Correlation'], col
 plt.xlabel('Streams')
 plt.title('Correlation of Streams with Each Musical Attribute')
 
-
 plt.show()
 ```
 Output:
 ![image](https://github.com/user-attachments/assets/006be23e-a318-4a34-ae39-b7018b557eec)
+
+- Based on the output, Mode appears to influence streams the most, showing the highest correlation with the number of streams. 
 
 #### # Scatter plot for valence_% and acousticness_%,  valence_% and acousticness_%:
 
@@ -351,12 +369,18 @@ plt.show()
 Output:
 ![image](https://github.com/user-attachments/assets/c9efacbc-5858-4925-86fc-79e79c3ea0e6)\
 
+Based on the scatter plots
+- Danceability % and Energy %: There appears to be a positive correlation between danceability and energy. Tracks with higher danceability scores also tend to have higher energy levels, which makes sense as both features often describe more lively, upbeat music.
+- Valence % and Acousticness %: The relationship between valence and acousticness is less clear and seems weak, if present at all. The data points are more spread out, suggesting little to no correlation. Valence (positivity) and acousticness (how "acoustic" a track is) may not be directly related in this dataset.
+
 ### 📺  Platform Popularity:
 #### Platform to favor the most popular tracks:
 
 ```# Group by each platform column to count the number of tracks in each
 playlist_counts = df[['in_spotify_playlists', 'in_deezer_playlists', 'in_apple_playlists']].sum().reset_index()
 playlist_counts.columns = ['Platform', 'Track Count']
+
+- The code calculates the number of tracks present in each playlist platform by summing the values in the columns for in_spotify_playlists, in_deezer_playlists, and in_apple_playlists. The result is stored in a DataFrame called playlist_counts, where each row represents a platform and the total count of tracks within its playlists.
 
 # Display
 playlist_counts
@@ -375,8 +399,9 @@ plt.title('Comparison of Track Counts Across Spotify Playlists, Spotify Charts, 
 plt.show()
 ```
 Output:
-### Empty
+![image](https://github.com/user-attachments/assets/e313c389-b055-4874-adda-073c9be42994)
 
+- Seeing in the Bar Chart, Spotify playlists contain the highest number of tracks, indicating that Spotify likely emphasizes including a broader range of popular music to appeal to a large audience. Deezer and Apple follow behind, with Deezer having a balanced number of tracks, suggesting it caters to a mix of popular and niche audiences, and Apple showing a more selective approach, possibly focusing on high-demand or curated music. Overall, Spotify appears to favor popular tracks the most, positioning itself as the platform with the widest selection for mainstream listeners.
 
 ### 👨‍🏫  Advanced Analysis
 #### Patterns among tracks with the same key or mode:
@@ -388,6 +413,8 @@ streams_by_key_mode.columns = ['Key', 'Mode', 'Average Streams']
 # Display the DataFrame
 streams_by_key_mode
 ```
+- The code groups the data by musical key and mode (where mode 1 represents Major and 0 represents Minor) and calculates the average number of streams for each combination. This results in a DataFrame, streams_by_key_mode, with columns for Key, Mode, and Average Streams, allowing us to analyze streaming patterns based on musical characteristics.
+
 Output:
 ![image](https://github.com/user-attachments/assets/955eab5c-0964-4a3e-98d3-4311e45beb04)
 
@@ -406,6 +433,8 @@ plt.show()
 Output: 
 ![image](https://github.com/user-attachments/assets/7d0c10f4-7d59-4db5-a7ff-6a9081d807f7)
 
+- Analyzing the streams data reveals that certain keys seem to attract higher average streams. Tracks in the key of C, in particular, tend to have the highest average streams, suggesting that this key resonates strongly with listeners. 
+
 #### Plot for Average Streams by Mode:
 ```
 streams_by_mode = df.groupby('mode')['streams'].mean().reset_index()
@@ -421,6 +450,8 @@ plt.show()
 Output:
 ![image](https://github.com/user-attachments/assets/56038ce3-ba60-43df-af81-0921766b4217)
 
+- Analyzing the streams data reveals that certain keys and modes seem to attract higher average streams. Tracks in Major mode (mode 1) tend to have higher average streams compared to those in Minor (mode 0), suggesting a preference for Major-mode tracks, which are often perceived as more uplifting or accessible. 
+
 #### Artists consistently appear in more playlists or charts:
 
 ```
@@ -432,6 +463,8 @@ top_spotify_tracks = track_counts.nlargest(5, 'in_spotify_playlists')
 top_deezer_tracks = track_counts.nlargest(5, 'in_deezer_playlists')
 top_apple_tracks = track_counts.nlargest(5, 'in_apple_playlists')
 ```
+- The code groups the data by artist name and sums up the number of times each artist appears in Spotify, Deezer, and Apple playlists. It then identifies the top 5 artists with the highest track count in each playlist platform individually
+
 #### Plot top 5 artists by number of tracks in Spotify playlists
 ```
 plt.figure(figsize=(10, 5))
@@ -469,7 +502,7 @@ plt.show()
 Output:
 ![image](https://github.com/user-attachments/assets/b3e747e1-777d-48c3-a47a-05437ecfb003)
 
-
+- It reveals that certain artists consistently appear across playlists on Spotify, Deezer, and Apple, indicating their popularity and strong presence across these platforms. Artists in the top 5 for each platform are likely mainstream or well-known, as they have significant playlist representation, helping them reach wider audiences. While the top artists might vary slightly by platform, popular artists appear across multiple playlists, with Spotify often showing the most frequent representation due to its extensive user base and playlist diversity.
 
 
 
