@@ -35,6 +35,49 @@ This analysis was conducted as part of an academic project for understanding dat
 
 :five: Based on your analysis, offer any insights or recommendations regarding the tracks, artists, or musical trends that could be useful for understanding what makes a track popular.
 
+-------------------
+## 🔖 GUIDE QUESTIONS:
+
+📟 Overview of Dataset:
+
+:one: How many rows and columns does the dataset contain?
+
+:two:What are the data types of each column? Are there any missing values?F
+
+📈 Basic Descriptive Statistics:
+
+:one:What are the mean, median, and standard deviation of the streams column?
+
+:two:What is the distribution of released_year and artist_count? Are there any noticeable trends or outliers?
+
+🎭 Top Performers:
+
+:one:Which track has the highest number of streams? Display the top 5 most streamed tracks.
+
+:two: Who are the top 5 most frequent artists based on the number of tracks in the dataset?
+
+ 📈 Temporal Trends:
+
+:one:Analyze the trends in the number of tracks released over time. Plot the number of tracks released per year.
+
+:two: Does the number of tracks released per month follow any noticeable patterns? Which month sees the most releases?
+
+🎵 Genre and Music Characteristics
+
+:one:Examine the correlation between streams and musical attributes like bpm, danceability_%, and energy_%. Which attributes seem to influence streams the most?
+
+:two: Is there a correlation between danceability_% and energy_%? How about valence_% and acousticness_%?
+ Platform Popularity
+
+:one:How do the numbers of tracks in spotify_playlists, spotify_charts, and apple_playlists compare? Which platform seems to favor the most popular tracks?
+
+ 👨‍🏫  Advanced Analysis
+
+:one:Based on the streams data, can you identify any patterns among tracks with the same key or mode (Major vs. Minor)?
+
+:two:Do certain genres or artists consistently appear in more playlists or charts? Perform an analysis to compare the most frequently appearing artists in playlists or charts.
+
+--------
 ## :file_cabinet: Dataset:
 
 :arrow_right: "spotify_data.csv"
