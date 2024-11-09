@@ -541,7 +541,7 @@ Output:
 :three: Changing the kind of Graphs for more efficient visualization.
 
 -----------------------
-## 📰 References: 
+## 📰 References and Materials Used: 
 :one: https://matplotlib.org/stable/gallery/color/named_colors.html
 
 :two: https://www.sitepoint.com/github-profile-readme/
