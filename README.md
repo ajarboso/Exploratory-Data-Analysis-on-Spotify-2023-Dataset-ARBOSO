@@ -167,7 +167,7 @@ plt.show()
 - The heatmap shows the correlation between "streams," various musical characteristics, and playlist metrics. Strong positive correlations appear between "streams" and both "in_spotify_playlists" and "in_apple_playlists," suggesting that songs featured in these playlists are streamed more. Musical traits like "danceability_%" and "valence_%" also show a moderate positive correlation, indicating that songs that are more danceable tend to have a more positive mood. There’s a negative correlation between "energy_%" and "acousticness_%," meaning that high-energy songs are less likely to be acoustic. Overall, the heatmap reveals how streaming numbers relate to playlist features and certain musical qualities.
 
   ----------------------------
-
+# 🔖 GUIDE QUESTIONS ANSWERS:
 ## 📟 Overview of Dataset:
 
 ####  rows and columns in the the dataset:
