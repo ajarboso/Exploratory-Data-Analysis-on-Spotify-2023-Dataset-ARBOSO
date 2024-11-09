@@ -19,11 +19,11 @@ University: University of Santo Tomas
   <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
 </div>
 
-### :man_technologist: About:
-
+## :man_technologist: About:
 This analysis was conducted as part of an academic project for understanding data analysis techniques in the field of music streaming. By utilizing Python-based libraries for data manipulation and visualization, this project offers insights into musical trends, artist popularity, and platform-specific preferences. The dataset analyzed here represents a snapshot of Spotify tracks, and findings from this project may be useful for streaming platforms, music producers, and marketing professionals.
 
-### 📖: GENERAL GUIDELINES:
+-------------------------
+## 📖: GENERAL GUIDELINES:
 
 :one: Begin by familiarizing yourself with the structure of the dataset. Check for missing values and data types, and perform an initial exploration to understand the different features available.
 
@@ -35,11 +35,14 @@ This analysis was conducted as part of an academic project for understanding dat
 
 :five: Based on your analysis, offer any insights or recommendations regarding the tracks, artists, or musical trends that could be useful for understanding what makes a track popular.
 
-### :file_cabinet: Dataset:
+## :file_cabinet: Dataset:
+
 :arrow_right: "spotify_data.csv"
 :arrow_right_hook:  Contains information about various Spotify tracks, including popularity metrics, genre information, danceability, and other audio features.
 
-### 🖥️: Code and Explanation:
+-------------------------
+
+## 🖥️: Code and Explanation:
 
 ##### Importing Libraries and Loading the Dataset:
 ```
@@ -53,9 +56,10 @@ df
 ```
 - This cell imports essential libraries for data analysis and visualization
 - Reads the Spotify dataset from a CSV file and stores it in a DataFrame (df) for analysis.
+-------------------------
 
+## 📘 Information of the dataFrame and Fixing all the missing Values and Data Types:
 
-### 📘 Information of the dataFrame and Fixing all the missing Values and Data Types:
 ```df.info()
 
 numeric_columns = ['streams', 'in_deezer_playlists', 'in_shazam_charts']
@@ -72,20 +76,24 @@ for column in numeric_columns:
 
 The purpose of this code is to convert specified DataFrame columns from object types to integers. It handles non-numeric or infinite values by converting them to NaN, then fills any missing values with zero. This ensures the columns are consistently formatted as integers, with errors and outliers managed, and changes any object data types to integer types.
 
-### 📘 Updated fixed dataFrame:
+  ----------------------------
+
+## 📘 Updated fixed dataFrame:
 
 ![image](https://github.com/user-attachments/assets/13d0bb86-9936-4faf-a3df-f5def5cc7fae)
 
-### 📈 Summary statistics:
+--------------------------------
+
+## 📈 Summary statistics:
 
 ``` df.describe() ```
 
 ![image](https://github.com/user-attachments/assets/fd18e374-b441-4d5b-ac0e-e311778f7936)
 
-- The output from df.describe() provides a summary of the statistical properties of each numeric column in the DataFrame. 
+- The output from df.describe() provides a summary of the statistical properties of each numeric column in the DataFrame.
+----------------------------
 
-### 📝 Correlations between different variable:
-
+## 📝 Correlations between different variable:
 ```
 numeric_columns = [
     'streams', 'bpm', 'danceability_%', 'valence_%', 'energy_%', 
@@ -115,7 +123,10 @@ plt.show()
 
 - The heatmap shows the correlation between "streams," various musical characteristics, and playlist metrics. Strong positive correlations appear between "streams" and both "in_spotify_playlists" and "in_apple_playlists," suggesting that songs featured in these playlists are streamed more. Musical traits like "danceability_%" and "valence_%" also show a moderate positive correlation, indicating that songs that are more danceable tend to have a more positive mood. There’s a negative correlation between "energy_%" and "acousticness_%," meaning that high-energy songs are less likely to be acoustic. Overall, the heatmap reveals how streaming numbers relate to playlist features and certain musical qualities.
 
-### 📟 Overview of Dataset:
+  ----------------------------
+
+## 📟 Overview of Dataset:
+
 ####  rows and columns in the the dataset:
 ```
 #Getting  rows and columns of the dataset
@@ -142,8 +153,10 @@ Output:
 ![image](https://github.com/user-attachments/assets/763ffe86-fcb4-4879-8fe4-0f5cd792d9f8)
 
 ![image](https://github.com/user-attachments/assets/cc772701-4edc-422d-9661-a476c253820f)
- 
-### 📈 Basic Descriptive Statistics: 
+
+----------------------------
+## 📈 Basic Descriptive Statistics: 
+
 ####  mean, median, and standard deviation of the streams column:
 
 ```
@@ -184,7 +197,8 @@ plt.show()
 
 ![image](https://github.com/user-attachments/assets/fbd29ebd-a629-48ce-a1c0-dfb211acdae1)
 
-### 🎭 Top Performers:
+----------------------------
+## 🎭 Top Performers:
 
 #### top 5 most streamed tracks:
 ```
@@ -239,7 +253,9 @@ Output:
 
 - This code finds the track with the highest number of streams and displays the top 5 most streamed tracks in a table. Also alculates the top 5 artists based on the number of tracks they have in the dataset and displays this in a bar chart. You can see in the graph who and Data Frame who is the top 5's.
 
-### 📈 Temporal Trends:
+----------------------------
+## 📈 Temporal Trends:
+
 ####  Trends in the number of tracks released over time:
 
 ```
@@ -305,8 +321,9 @@ Output:
 The plot shows patterns in track releases by month. For example, if December has the highest number of releases, it suggests a trend of increased music production for the holiday season. 
 
 
+----------------------------
+## 🎵 Genre and Music Characteristics:
 
-### 🎵 Genre and Music Characteristics:
 ####  Correlation between streams and musical attributes
 ```
 #Asigning specific attributes
@@ -373,7 +390,9 @@ Based on the scatter plots
 - Danceability % and Energy %: There appears to be a positive correlation between danceability and energy. Tracks with higher danceability scores also tend to have higher energy levels, which makes sense as both features often describe more lively, upbeat music.
 - Valence % and Acousticness %: The relationship between valence and acousticness is less clear and seems weak, if present at all. The data points are more spread out, suggesting little to no correlation. Valence (positivity) and acousticness (how "acoustic" a track is) may not be directly related in this dataset.
 
-### 📺  Platform Popularity:
+----------------------------
+## 📺  Platform Popularity:
+
 #### Platform to favor the most popular tracks:
 
 ```# Group by each platform column to count the number of tracks in each
@@ -403,7 +422,9 @@ Output:
 
 - Seeing in the Bar Chart, Spotify playlists contain the highest number of tracks, indicating that Spotify likely emphasizes including a broader range of popular music to appeal to a large audience. Deezer and Apple follow behind, with Deezer having a balanced number of tracks, suggesting it caters to a mix of popular and niche audiences, and Apple showing a more selective approach, possibly focusing on high-demand or curated music. Overall, Spotify appears to favor popular tracks the most, positioning itself as the platform with the widest selection for mainstream listeners.
 
-### 👨‍🏫  Advanced Analysis
+----------------------------
+## 👨‍🏫  Advanced Analysis
+
 #### Patterns among tracks with the same key or mode:
 ```
 #Group by for key and mode 
@@ -504,7 +525,24 @@ Output:
 
 - It reveals that certain artists consistently appear across playlists on Spotify, Deezer, and Apple, indicating their popularity and strong presence across these platforms. Artists in the top 5 for each platform are likely mainstream or well-known, as they have significant playlist representation, helping them reach wider audiences. While the top artists might vary slightly by platform, popular artists appear across multiple playlists, with Spotify often showing the most frequent representation due to its extensive user base and playlist diversity.
 
+-----------------------
+## 🖋️ Revisions:
+:one: Replaced Matplot to Seaborn for Correlations between different variables with the help of Chat GPT.
+:two: Coloring all of the Graphs into Pastel Colors
+:three: Changing the kind of Graphs for more efficient visualization.
+:Four: 
 
+-----------------------
+## 📰 References: 
+:one: https://matplotlib.org/stable/gallery/color/named_colors.html
+:two: https://www.sitepoint.com/github-profile-readme/
+
+-----------------------
+
+
+<div  align="center">
+  <img src="https://media.giphy.com/media/Z0YRcYVJqXyavIR9t6/giphy.gif?cid=ecf05e47cvi1mp4rrftjv18c1iilyoz7h202utbub89phu1n&ep=v1_gifs_search&rid=giphy.gif&ct=g" width="600" height="300"/>
+</div>
 
 
 
