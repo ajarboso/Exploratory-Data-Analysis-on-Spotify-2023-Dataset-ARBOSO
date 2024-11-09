@@ -42,7 +42,7 @@ This analysis was conducted as part of an academic project for understanding dat
 
 -------------------------
 
-## 🖥️: Code and Explanation:
+## 🖥️: Codes and Explanations:
 
 ##### Importing Libraries and Loading the Dataset:
 ```
